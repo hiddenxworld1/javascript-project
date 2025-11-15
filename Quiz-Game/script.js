@@ -16,51 +16,186 @@ const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
 
 const quizQuestions = [
-  {
-    question: "What is the capital of France?",
-    answers: [
-      { text: "London", correct: false },
-      { text: "Berlin", correct: false },
-      { text: "Paris", correct: true },
-      { text: "Madrid", correct: false },
-    ],
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    answers: [
-      { text: "Venus", correct: false },
-      { text: "Mars", correct: true },
-      { text: "Jupiter", correct: false },
-      { text: "Saturn", correct: false },
-    ],
-  },
-  {
-    question: "What is the largest ocean on Earth?",
-    answers: [
-      { text: "Atlantic Ocean", correct: false },
-      { text: "Indian Ocean", correct: false },
-      { text: "Arctic Ocean", correct: false },
-      { text: "Pacific Ocean", correct: true },
-    ],
-  },
-  {
-    question: "Which of these is NOT a programming language?",
-    answers: [
-      { text: "Java", correct: false },
-      { text: "Python", correct: false },
-      { text: "Banana", correct: true },
-      { text: "JavaScript", correct: false },
-    ],
-  },
-  {
-    question: "What is the chemical symbol for gold?",
-    answers: [
-      { text: "Go", correct: false },
-      { text: "Gd", correct: false },
-      { text: "Au", correct: true },
-      { text: "Ag", correct: false },
-    ],
-  },
+ {
+  question: "What is the speed of light?",
+  answers: [
+    { text: "3 × 10⁸ m/s", correct: true },
+    { text: "3 × 10⁶ m/s", correct: false },
+    { text: "3 × 10⁴ m/s", correct: false },
+    { text: "3 × 10² m/s", correct: false },
+  ],
+},
+{
+  question: "Which country hosted the 2016 Summer Olympics?",
+  answers: [
+    { text: "China", correct: false },
+    { text: "Brazil", correct: true },
+    { text: "Japan", correct: false },
+    { text: "Russia", correct: false },
+  ],
+},
+{
+  question: "Which element has the atomic number 1?",
+  answers: [
+    { text: "Helium", correct: false },
+    { text: "Hydrogen", correct: true },
+    { text: "Oxygen", correct: false },
+    { text: "Carbon", correct: false },
+  ],
+},
+{
+  question: "Which continent is the largest by land area?",
+  answers: [
+    { text: "Africa", correct: false },
+    { text: "Asia", correct: true },
+    { text: "North America", correct: false },
+    { text: "Europe", correct: false },
+  ],
+},
+{
+  question: "What does CPU stand for?",
+  answers: [
+    { text: "Central Processing Unit", correct: true },
+    { text: "Computer Personal Unit", correct: false },
+    { text: "Control Program Utility", correct: false },
+    { text: "Central Power Unit", correct: false },
+  ],
+},
+{
+  question: "Which gas is essential for human respiration?",
+  answers: [
+    { text: "Nitrogen", correct: false },
+    { text: "Oxygen", correct: true },
+    { text: "Carbon Dioxide", correct: false },
+    { text: "Hydrogen", correct: false },
+  ],
+},
+{
+  question: "Which country is the largest by population?",
+  answers: [
+    { text: "India", correct: false },
+    { text: "China", correct: false },
+    { text: "India and China", correct: false },
+    { text: "Depends on year (use India as 2023+)", correct: true },
+  ],
+},
+{
+  question: "Which organ pumps blood throughout the body?",
+  answers: [
+    { text: "Liver", correct: false },
+    { text: "Heart", correct: true },
+    { text: "Kidney", correct: false },
+    { text: "Lungs", correct: false },
+  ],
+},
+{
+  question: "Which metal is liquid at room temperature?",
+  answers: [
+    { text: "Mercury", correct: true },
+    { text: "Iron", correct: false },
+    { text: "Copper", correct: false },
+    { text: "Aluminum", correct: false },
+  ],
+},
+{
+  question: "Which device is used to store data permanently?",
+  answers: [
+    { text: "RAM", correct: false },
+    { text: "ROM", correct: true },
+    { text: "Cache", correct: false },
+    { text: "Register", correct: false },
+  ],
+},
+{
+  question: "Which planet has the most moons?",
+  answers: [
+    { text: "Earth", correct: false },
+    { text: "Jupiter", correct: false },
+    { text: "Saturn", correct: true },
+    { text: "Mars", correct: false },
+  ],
+},
+{
+  question: "What is the boiling point of water at sea level?",
+  answers: [
+    { text: "50°C", correct: false },
+    { text: "75°C", correct: false },
+    { text: "100°C", correct: true },
+    { text: "150°C", correct: false },
+  ],
+},
+{
+  question: "Which is the national animal of India?",
+  answers: [
+    { text: "Lion", correct: false },
+    { text: "Elephant", correct: false },
+    { text: "Tiger", correct: true },
+    { text: "Peacock", correct: false },
+  ],
+},
+{
+  question: "Which continent is known as the Dark Continent?",
+  answers: [
+    { text: "Asia", correct: false },
+    { text: "Africa", correct: true },
+    { text: "Europe", correct: false },
+    { text: "Australia", correct: false },
+  ],
+},
+{
+  question: "Who wrote the play 'Romeo and Juliet'?",
+  answers: [
+    { text: "Leo Tolstoy", correct: false },
+    { text: "William Shakespeare", correct: true },
+    { text: "Mark Twain", correct: false },
+    { text: "Charles Dickens", correct: false },
+  ],
+},
+{
+  question: "Which vitamin is produced naturally when exposed to sunlight?",
+  answers: [
+    { text: "Vitamin A", correct: false },
+    { text: "Vitamin C", correct: false },
+    { text: "Vitamin D", correct: true },
+    { text: "Vitamin B12", correct: false },
+  ],
+},
+{
+  question: "Which instrument is used to measure air pressure?",
+  answers: [
+    { text: "Thermometer", correct: false },
+    { text: "Barometer", correct: true },
+    { text: "Hygrometer", correct: false },
+    { text: "Seismograph", correct: false },
+  ],
+},
+{
+  question: "Which is the largest desert in the world?",
+  answers: [
+    { text: "Sahara Desert", correct: false },
+    { text: "Gobi Desert", correct: false },
+    { text: "Arctic Desert", correct: false },
+    { text: "Antarctic Desert", correct: true },
+  ],
+},
+{
+  question: "Which shape has three sides?",
+  answers: [
+    { text: "Square", correct: false },
+    { text: "Triangle", correct: true },
+    { text: "Rectangle", correct: false },
+    { text: "Circle", correct: false },
+  ],
+},
+{
+  question: "Which planet is closest to the Sun?",
+  answers: [
+    { text: "Venus", correct: false },
+    { text: "Earth", correct: false },
+    { text: "Mercury", correct: true },
+    { text: "Mars", correct: false },
+  ],
+},
 ];
 
 //Quiz State vars
