@@ -11,13 +11,29 @@
     <div class="container">
       <h2 id="title">To-Do</h2>
 
-      <div class="input" >
-        <input type="text" placeholder="Enter your task..." id="inputText"/>
+      <div class="input">
+        <input type="text" placeholder="Enter your task..." id="inputText" />
         <button id="addBtn">Add</button>
       </div>
 
-      <div class="result" id="showResult">
-          
+      <div class="resultConatiner">
+        <div class="result" id="showResult"></div>
+      </div>
+
+
+      <div style="display: none;" class="model">
+        <div class="title">
+          <h2>Edit your task</h2>
+          <button id="close">X</button>
+        </div>
+        <div class="editInput">
+          <input type="text" placeholder="Edit your task..." id="editInput" />
+        </div>
+
+        <div class="editButton">
+          <button id="cancel">Cancel</button>
+          <button id="saveBtn">Save</button>
+        </div>
       </div>
     </div>
 

@@ -18,13 +18,6 @@ function renderUI() {
   result.textContent = "";
 
   todos.forEach((e) => {
-    //Edit Button
-
-    const editBtn = document.createElement("input");
-    editBtn.type = "text";
-
-    editBtn.addEventListener("check", () => {});
-
     //CheckBox Field
 
     const checkBox = document.createElement("input");
@@ -33,6 +26,7 @@ function renderUI() {
 
     checkBox.addEventListener("click", () => {
       e.completed = checkBox.checked;
+      result.style.textDecoration=e.completed ? "line-through": "none"
       renderUI();
     });
 
@@ -43,11 +37,16 @@ function renderUI() {
 
     const delButton = document.createElement("button");
     delButton.textContent = "X";
-
     delButton.addEventListener("click", () => handleDelete(e.id));
+
+    //Edit Button
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.addEventListener("click", () => handleEdit(e));
 
     result.appendChild(checkBox);
     result.appendChild(item);
+    result.appendChild(editButton);
     result.appendChild(delButton);
   });
 }
@@ -56,3 +55,39 @@ function handleDelete(id) {
   todos = todos.filter((e) => e.id !== id);
   renderUI();
 }
+
+function handleEdit(data) {
+  const model=document.querySelector(".model");
+  model.style.display="block"
+  const text = document.getElementById("editInput");
+  text.value = data.title;
+
+  //save data
+
+  const saveData = document.getElementById("saveBtn");
+  saveData.addEventListener("click", () => {
+    const txt=text.value;
+    todos = todos.map((e) =>
+      e.id === data.id ? { ...e, title: txt } : e
+    );
+    console.log(todos);
+
+    renderUI();
+    const model=document.querySelector(".model");
+    model.style.display="none"
+  });
+}
+
+document.getElementById("close").addEventListener("click", ()=>{
+    const model=document.querySelector(".model");
+    model.style.display="none"
+
+})
+
+
+document.getElementById("cancel").addEventListener("click", ()=>{
+    const model=document.querySelector(".model");
+    model.style.display="none"
+
+})
+
